@@ -1,0 +1,9 @@
+---
+- name: CentOS SCP
+  hosts: '{{ host_name }}'
+  gather_facts: no
+
+  tasks:
+    - name: SCP Files
+      command: scp -r root@virt-engine1:/root/engine_backup* /root/ 
+
